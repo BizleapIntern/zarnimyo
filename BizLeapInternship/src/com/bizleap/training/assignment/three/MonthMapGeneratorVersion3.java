@@ -125,16 +125,21 @@ package com.bizleap.training.assignment.three;
 		
 		public void prettyPrint(int toYear,int fromYear) {
 			System.out.println("monthMap in the prettiest form");
+			boolean newLineRequired=false;
 			for(int key:monthMap.keySet()) {
 				System.out.println("For Day "+key+":");
 				for(int year=toYear; year<=fromYear; year++)
 				{	
+					newLineRequired=false;
 					for(Month month : (List<Month>)monthMap.get(key)) {
 						if(year==month.year) {
 							System.out.print(month+"   ");
+							newLineRequired=true;
 						}
 					}
+					if(newLineRequired) {
 					System.out.println();
+					}
 				}
 				System.out.println();
 			}
