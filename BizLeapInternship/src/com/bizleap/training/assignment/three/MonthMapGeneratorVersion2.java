@@ -23,7 +23,7 @@ package com.bizleap.training.assignment.three;
 			}
 			
 			public String toString() {
-				return this.year+"/"+this.name;
+				return this.name+"/"+this.year;
 			}
 		}
 		
@@ -123,7 +123,6 @@ package com.bizleap.training.assignment.three;
 		}
 		
 		public void prettyPrint() {
-			//print monthMap here in the prettiest form.
 			System.out.println("monthMap in the prettiest form");
 			Set<Entry<Integer, Object>> set = monthMap.entrySet();
 		    Iterator<Entry<Integer, Object>> iterator = set.iterator();
@@ -135,15 +134,9 @@ package com.bizleap.training.assignment.three;
 		}
 		
 		public static void main(String[] args) {
-			/*System.out.println("MonthMap for Year 2000 to 2002");
-			System.out.println(new MonthMapGenerator2().createMonthMapRange(2002,2005));
-			System.out.println("MonthMap for Year 2000 to 2002");
-			System.out.println(new MonthMapGenerator2().createMonthMap(2002,2005));
-			//System.out.println("Test Error : ");
-			//System.out.println(new MonthGenerator2().createMonthMap(-2000,0000));*/
 			MonthMapGeneratorVersion2 monthMapGenerator=new MonthMapGeneratorVersion2();
 			System.out.println("monthMap in raw type");
-			System.out.println(monthMapGenerator.createMonthMap(2001,2001));
+			System.out.println(monthMapGenerator.createMonthMap(1997,2001));
 			System.out.println();
 			monthMapGenerator.prettyPrint();
 		}
